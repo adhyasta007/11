@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ponty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffb3c6; /* Changed background color */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ddf2d1; /* Changed container color */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .spotify-embed {
+            margin: 20px 0;
+        }
+
+        /* Adjusted size for the Spotify iframe */
+        .spotify-embed iframe {
+            width: 300px; /* Width */
+            height: 380px; /* Height */
+        }
+
+        .message {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: transform 0.2s, background-color 0.2s; /* Animation effect */
+        }
+
+        button:hover {
+            background-color: #ff4f3d;
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        button:active {
+            transform: scale(0.95); /* Shrink on click */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #surpriseMessage {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff6f61;
+        }
+
+        /* Animation for surprise message */
+        .surprise-animation {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>lagu buat lala alpaca 🦙💓</h1>
+        <div class="spotify-embed">
+            <iframe src="https://open.spotify.com/embed/track/6Dh1zHQjEaOp29VW9pp3xG" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="message">
+            <p>inget ga kita pernah carpool pake lagu ini pas masih pdkt? tiap kali muter lagunya nadin selalu inget kamu,terutama lagu ini. jadi inget pas pdkt apalagi di bagian "aku punya harapan untuk kita"💖</p>
+        </div>
+        <button id="surpriseButton">Click for a Surprise!</button>
+        <div id="surpriseMessage" class="hidden">
+            <p class="surprise-animation">I love you ponty💕</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('surpriseButton').addEventListener('click', function() {
+            const surpriseMessage = document.getElementById('surpriseMessage');
+            surpriseMessage.classList.toggle('hidden');
+            if (!surpriseMessage.classList.contains('hidden')) {
+                surpriseMessage.classList.add('surprise-animation');
+            }
+        });
+    </script>
+</body>
+</html>
